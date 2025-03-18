@@ -601,7 +601,6 @@ def calculate_payoff_points(selected_options, price_range_percentage=0.2, num_po
 # ---------------------------
 # Dash App Initialization and Layout
 # ---------------------------
-app = dash.Dash(__name__)
 
 # Load ticker symbols from GitHub
 tickers_df = pd.read_csv("https://raw.githubusercontent.com/JRCon1/Technical-Analysis-Project/main/Stock%20Data%207-10%20CSV.csv", dtype=str, low_memory=False)
