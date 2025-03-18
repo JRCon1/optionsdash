@@ -603,9 +603,8 @@ def calculate_payoff_points(selected_options, price_range_percentage=0.2, num_po
 # ---------------------------
 
 # Load ticker symbols from GitHub
-tickers_df = pd.read_csv("https://raw.githubusercontent.com/JRCon1/Technical-Analysis-Project/main/Stock%20Data%207-10%20CSV.csv", dtype=str, low_memory=False)
-tickers = tickers_df[tickers_df['Options'] == 'Yes']
-tickers = tickers['Symbol'].dropna().unique().tolist()
+tickers_df = pd.read_csv("Stock Data 7-10 CSV.csv", dtype=str, low_memory=False)  # Adjust path if in a subdirectory, e.g., "data/Stock Data 7-10 CSV.csv"
+tickers = tickers_df[tickers_df['Options'] == 'Yes']['Symbol'].dropna().unique().tolist()
 
 # Define columns for the DataTable (including price and trade type columns)
 table_columns = [
